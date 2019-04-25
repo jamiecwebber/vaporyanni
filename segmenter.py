@@ -20,7 +20,7 @@ def get_features(y, sr):
     feature_vector = (feature_vector-np.mean(feature_vector)) / np.std(feature_vector)
     return feature_vector
 
-source_audio = "D:/Yanni/YanniBestOf/Yanni - Nostalgia (remastered track).mp3"
+source_audio = "D:/Yanni/YanniBestOf/Yanni - Nine.mp3"
 
 hop_length = 512
 y, sr = librosa.load(source_audio)
@@ -48,3 +48,4 @@ plt.subplot(1, 1, 1)
 librosa.display.waveplot(y, sr=sr)
 plt.vlines(times, -1, 1, color='r', alpha=0.9, label='Onsets')
 plt.title('Wavefile with %d onsets plotted' % len(times))
+plt.show()
